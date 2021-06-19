@@ -1,4 +1,5 @@
 import 'package:cryptocurrency_app/pages/ui/home_page.dart';
+import 'package:cryptocurrency_app/pages/ui/trading_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,16 +12,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Center(
-      child: Text(
-        'Trading Page',
-        style: GoogleFonts.poppins(
-          color: Colors.white,
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-    ),
+    TradingPage(),
     Center(
       child: Text(
         'Profile Page',
@@ -58,13 +50,6 @@ class _MainPageState extends State<MainPage> {
           backgroundColor: Color(0xFF1D1D1D),
           selectedItemColor: Color(0xFFF6543E),
           unselectedItemColor: Color(0xFFB9C1D9),
-          selectedLabelStyle: GoogleFonts.poppins(
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
-          ),
-          unselectedLabelStyle: GoogleFonts.poppins(
-            fontSize: 12,
-          ),
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Image.asset(
